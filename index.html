@@ -6,68 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LORENA PELAEZ</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="Icon" href="img/Logolore.ico">
     <script src="https://kit.fontawesome.com/0d1f9927da.js" crossorigin="anonymous"></script>
    </head>
 
- <!-- La estructura básica y la vinculación con CSS estan listas. A codear! 💪  -->
-    <!-- En este archivo escriban su HTML -->
+ 
  <body>
    <div class="contenedor">
     <header>
-            <nav>
-                <div>
-                     <img src="img/LogoLorena2.png" alt="logo personal">
-                </div>
+            <img src="img/LogoBlancoLore-re.png" alt="logo personal">
+            <button id="abrir" class="abrir-menu"><i class= "fa-solid fa-bars"></i></button>
+                      
+                 <nav class="nav-lista" id="nav">
+                     <button id="cerrar" class="cerrar-menu"><i class="fa-solid fa-circle-xmark"></i></button>
+      
+                     <ul class="lista" id="lista">
+                         <li><a class="nav-link"href="#ruta1">Inicio</a></li>
+                         <li><a class="nav-link"href="#ruta2">Contacto</a></li>
+                         <li><a class="nav-link"href="#sobremi">Sobre Mí</a></li> 
+                         <li><a class="nav-link"href="#portfolio">Portfolio</a></li> 
+                     </ul>
 
-                <ul>
-                    <li><a href="#ruta1">Inicio</a></li>
-                    <li><a href="#ruta2">Contacto</a></li> 
-                </ul>
-            
-            </nav>
+                 </nav>
+                          
     </header> 
     
     <main>
-             <nav>
-                <img src="img/fotodemanos.jpg" alt="foto de manos"> 
-             </nav>
-             <div class="texto">  
-                <h1 id="ruta1">¡Hola! Soy Lorena Peláez.</h1>
+             
+            <nav class="imagenes">
+               
+                 <input id="checkitem" type="checkbox"onclick="enableDarkMode()">   
+                     <img src="img/fotodelorena.png" alt="foto personal" class="logo"> 
+                
+                 <div>  
+                      <h1 id="ruta1">¡Hola! Soy Lorena Peláez. </h1>
+                      <span class="Experiencia">Frontend Developer</span>
 
-                <p> Soy administradora de Empresas con trayectoria enfocada a empresas de seguros, con 10 años de experiencia en puestos gerenciales medios, en el sector privado. Orientada a resultados, a maximizar la ganancia de la compañia y minimizar los gastos innecesarios, a brindar apoyo administrativo y gestionar actividades financieras de la empresa. Buenas habilidades de comunicación, toma de decisiones, manejo del tiempo, responsable del creciemiento del equipo de trabajo de la sucursal gestionando la motivación y capacitación para el logro de excelentes resultados.</p>
+                 </div>  
+                
+             </nav>
+             
+             <div>
+
+                 <p class="texto"> Soy estudiante autodidacta de desarrollador web en codigopalante.org  desde Marzo 2023, proactiva, organizada y con capacidad para desarrollar páginas web y multitareas. Emprendedora en busca de hacer un mundo un lugar más unido y conectado a la web.</p>
             
              </div>
 
-             <section>
+             <section  id="sobremi">
                             
-                <button name="Mi CV" type="button"><a href="https://docs.google.com/document/d/1tP2vTZr4hiT0iKSAvdOVVrgh5t1yS-L3/edit?usp=sharing&ouid=116558547156513939721&rtpof=true&sd=true" class="CV" target="_blank">Descargar mi CV</a></button>
+                 <button name="Mi CV" type="button"><a href="https://docs.google.com/document/d/1tP2vTZr4hiT0iKSAvdOVVrgh5t1yS-L3/edit?usp=sharing&ouid=116558547156513939721&rtpof=true&sd=true" class="CV" target="_blank">Descargar mi CV</a></button>
 
              </section> 
 
             <section class="contenido">
-                   <h2 class="secundario">¡Hablemos!</h2>
-                   <article> Cuento con excelentes aptitudes de comunicación en la gestión de las ventas, he colaborado con ejecutivos de ventas en el área comercial,. He realizado balances de gastos y estimaciones de inversiones así como también estoy actualizada en procedimientos fiscales.Comunicación Efectiva, trato agradable, gestión de documentos, flexibilidad y analitica.</article>
+                     <h2 class="secundario">¡Hablemos!</h2>
+
+                     <article>Cuento con excelentes aptitudes de comunicación y con mucho estusiasmo por la interfaz y la experiencia del usuario, así como por la industria informática. Conocimiento en las herramientas TIC (Tecnologías de la información y comunicación), curso realizado en el SENA, conocimiento y experiencia en el manejo de Acsel-x Sistema core integral de administración de pólizas. Conocimiento en los lenguajes HTML, CSS, Java Script,creativa con conocimientos básicos de diseño.</Script></article>
              </section> 
              
-             <section id="ruta2">
-                <aside class="iconos">
-                   <a href="mailto:lorena.pelaez@hotmail.com" class="mail" target="_blank">
-                      <i class="fa-solid fa-envelope"></i> 
-                   </a>  
-                   <a href="#" class="linkedin">
-                      <i class="fa-brands fa-linkedin"></i>
-                   </a>
-                   <a href="#" class="github">
-                      <i class="fa-brands fa-github"></i>
-                   </a>
-                </aside> 
-            </section>
-            
     </main>
+    <!--seccion portafolio-->
+
+         <section id="portfolio">
+             <h3 class="titulo-seccion">Mis Proyectos</h3>
+             <div class="fila">
+                 <div class="proyecto">
+                     <div class="overlay"></div>
+                     <img src="img/Mi primer proyecto.png" alt="proyecto">
+                     <div class="info">
+                         <h4>Descripcion Proyecto</h4>
+                         <p>Mi primer proyecto</p>
+                     </div>
+                 </div>
+
+                 <div class="proyecto">
+                     <div class="overlay"></div>
+                     <img src="img/M iprimer Formulario.png" alt="formulario">
+                     <div class="info">
+                         <h4>Descripcion Proyecto</h4>
+                         <p>Formulario con Java Script</p>
+                     </div>
+                 </div>
+
+                 <div class="proyecto">
+                     <div class="overlay"></div>
+                     <img src="img/Catalogo.jpg" alt="Catalogo">
+                     <div class="info">
+                         <h4>Descripcion Proyecto</h4>
+                         <p>Catalogo para emprendimiento</p>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+  <!-- Seccion Contacto -->
+ <section id="contacto">
+    <h3 class="titulo-seccion">Contactarme ahora</h3>
+    <div class="contenedor-form">
+        
+       <form action="https://formspree.io/f/xaygworq"
+       method="POST">
+
+           <div class="fila mitad">
+               <input type="text" placeholder="Nombre Completo *" class="input-mitad" name="Nombre Completo">
+               <input type="email"placeholder="Dirección de Email" class="input-mitad" name="_replyto">
+           </div>
+           <div class="fila">
+               <input type="text" placeholder="Tema..." class="input-full" name="Tema">
+           </div>
+           <div class="fila">
+               <textarea name="message" id="message" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+           </div>
+
+           <input type="submit" value="Enviar Mensaje" class="btn-enviar" name="Enviar Mensaje">
+
+       </form>
+    </div>
+</section>
+
+<section id="ruta2">
+    <aside class="iconos">
+       <a href="mailto:lorena.pelaez@hotmail.com" class="mail" target="_blank">
+          <i class="fa-solid fa-envelope"></i> 
+       </a>  
+       <a href="https://www.linkedin.com/in/lorena-pelaez-710779278/" class="linkedin" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+       </a>
+       <a href="https://github.com/LorenCPP" class="github" target="_blank">
+          <i class="fa-brands fa-github"></i>
+       </a>
+    </aside> 
+</section>
+
+<!--seccion footer-->
         
      <footer> 
           <small>&copy;2023 Derechos Reservados.</small>
+       
      </footer>
-   </div>
+   
+   <script src="js/script.js"></script>
+
  </body>
 </html>

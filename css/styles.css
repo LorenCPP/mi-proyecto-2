@@ -1,122 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-/* Fonts */
-/* Importar aquí la font */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
-*  cuyos valores asigna por defecto el navegador.
-*/
-
-/* Reset */
 * {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;  
-
-  /* Para que el scrolleo en la one page sea suave */
+  padding: 0;
   scroll-behavior: smooth;
 }
 
-/* Para quitar los puntos a los items de listas */
 ul {
   list-style: none;
 }
 
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
-*  el margin: auto; para tenerlo centrado fácilmente ;)
-*/
 main {
-
   max-width: 1200px;
   min-height: 100vh;
-  margin:auto;
- position: relative; 
- text-align: center;
- }
- 
- main nav img { /*foto*/
-  width: 90%;
-  max-width: 400px;
-  height:auto;
-  border-radius: 60%;
-  margin-top: 120px; 
-
+  margin: auto;
+  position: relative;
+  text-align: center;
 }
 
 Body {
- min-height: 100vh;
- width: 100%;
- font-size: 18px;
- background-color: #fbfbfb;
- line-height: 1.2;
- cursor: pointer;
- 
-}
-
-header nav{  
-  height: 90px;
-  width: 1200px;
+  min-height: 100vh;
+  width: 100%;
+  font-size: 18px;
   background-color: #fbfbfb;
-  display:flex;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  top: 0; 
-  z-index: 2;
-  box-shadow: 0px 3px 10px rgb(192, 189, 189);
+  line-height: 1.2;
+  cursor: pointer;
+  
 }
 
-header nav div img { /*logo*/
+header {
+  height: 90px;
+  width: 100%;
+  background-color: #8b0404;
   display: flex;
-  padding:20px;
-  border-radius: 50%;
-  width:170px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0px 3px 10px rgb(41, 37, 37);
+}
+
+header img {
+  /*logo*/
+  display: flex;
+  padding: 10px;
+  width: 135px;
   height: auto;
-  
 }
 
-header nav ul{ 
+.nav-lista {
   margin: 0;
-  padding: 0; 
-  
+  padding: 0;
 }
 
-header nav ul li{
-  display:inline-block;
-
+.nav-lista ul li {
+  display: inline-block;
 }
 
-header nav ul li a {
-  
-  margin-right: 8px;
-  margin-left: 8px;
-  display: block;
- 
- 
+.nav-lista ul li a {
+  padding: 0.5rem 1rem;
+  margin: 0 1em;
+  color: #fbfbfb;
 }
+
 header nav ul li a:hover {
-  color: #b303f8;
- 
+  color: aqua;
 }
 
+.Experiencia {
+  color: darkslategray;
+  font-size: 25px;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  background-color: #478f8a;
+  appearance: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+input[type="checkbox"]:checked {
+  background-color: #990000;
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.7s ease;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translate(20px);
+}
+
+.dark-mode {
+  background-color: #0f0f0f;
+  color: #f2f2f2;
+}
+
+.imagenes {
+  /*foto*/
+
+  height: auto;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 90%;
+  max-width: 350px;
+  margin-left: 150px;
+  border-radius: 50%;
+}
+
+#ruta1 {
+  color: #990000;
+  font-size: 48px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+}
 
 .texto {
-  align-items: center;
-  text-align:center;
-  text-indent:  15px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  background-color:#95cac7;
+  text-align: center;
+  text-indent: 15px;
   margin-top: 20px;
-  margin-left: 20px;
   margin-right: 20px;
-  padding: 10px;;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 50px;
   line-height: 1.2;
- }
+}
 
 p {
   font-size: 18px;
@@ -125,67 +167,200 @@ p {
   border-radius: 20px;
 }
 
-.contenedor{
+.contenedor {
   min-height: 100vh;
   width: 100%;
-  max-width: 1200px;
-  margin:auto;
+  min-width: 1200px;
+  margin: 0;
   overflow: hidden;
+  
 }
 
-button {
- 
+section button {
   font-size: 20px;
-  background-color: #af599e;
+  background-color: #990000;
   border-radius: 20px;
   border: none;
   justify-content: space-between;
   margin-bottom: 50px;
   cursor: pointer;
   padding: 10px;
-
+  transition: 0.2s;
 }
-.CV{
+section button :hover {
+  background-color: #478f8a;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+}
+.CV {
   color: #fbfbfb;
   font-size: 20px;
 }
+.CV:hover {
+  color: #990000;
+  background-color: #478f8a;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+}
 
-h1{
+h1 {
   font-size: 36px;
   text-align: center;
 }
 
-.contenido{
-  color:#0f0f0f;
-  background-color: rgba(175,89,158,0.3);
+.contenido {
+  color: #0f0f0f;
+  box-shadow: 0px 3px 10px rgb(78, 7, 7);
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 20px;
-  margin-right: 20px; 
+  margin-right: 20px;
   border-radius: 20px;
-  text-align:center;
-  text-indent:15px;
+  text-align: center;
+  text-indent: 15px;
   padding: 20px;
 }
 .secundario {
-  font-size: 28px;
+  font-size: 32px;
+  color: #990000;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
   padding: 15px;
- 
 }
-  footer{
-    height: 90px;
-    background-color: #af599e;
-    text-align: center;
-    padding: 50px;
-    margin-bottom: 0;
-    margin-top: 20px;
-    color:#fbfbfb;
- 
-  }
-  
+
+/* seccion P O R T F O L I O */
+
+#portfolio {
+  max-width: 1100px;
+  padding: 100px 0;
+  margin: auto;
+}
+
+#portfolio .titulo-seccion {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  color:#8b0404;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+#portfolio .fila {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+#portfolio .fila .proyecto {
+  max-width: 450px;
+  border: 1px solid #000;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .fila .proyecto img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+#portfolio .fila .proyecto:hover img {
+  filter: grayscale(0);
+}
+
+#portfolio .fila .proyecto .info {
+  position: absolute;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color:aqua;
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  bottom: -40px;
+  transition: 0.5s;
+}
+
+#portfolio .fila .proyecto:hover .info {
+  opacity: 1;
+  bottom: 0;
+}
+
+/*seccion C O N T A C T O */
+
+#contacto {
+  padding: 100px 15px;
+  background-color:#f3f3f3;
+}
+
+#contacto .titulo-seccion {
+  margin-bottom: 20px;
+}
+
+#contacto .contenedor-form {
+  max-width: 1100px;
+  margin: auto;
+}
+
+#contacto .contenedor-form .fila {
+  margin-bottom: 15px;
+}
+
+#contacto .contenedor-form .mitad {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contacto .contenedor-form input,
+#contacto .contenedor-form textarea {
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  border: 1px solid #919191;
+}
+
+#contacto .contenedor-form .mitad input {
+  width: 48%;
+}
+
+#contacto .contenedor-form .input-full {
+  width: 100%;
+}
+
+#contacto .titulo-seccion {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  color:#8b0404;
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+  text-decoration-thickness: 5px;
+}
+
+#contacto .btn-enviar {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 10px 15px;
+}
+
+#contacto .btn-enviar:hover {
+  background-color:#8b0404;
+  color: #fff;
+}
+
+#ruta2{
+background-color:#f3f3f3 ;
+
+}
 .iconos {
   font-size: 50px;
   display: flex;
@@ -193,35 +368,168 @@ h1{
   gap: 50px;
 }
 
-.iconos a:hover{
+.iconos a:hover {
   transform: scale(1.2);
+  color: #d6360e;
 }
-.mail{
-  color:rgb(15, 15, 15);
-}
-
-.linkedin{
-  color: rgb(15, 15, 15);
-}
-.github{
-  color:rgb(15, 15, 15);
+.mail {
+  color:#8b0404;
 }
 
+.linkedin {
+  color:#8b0404;
+}
+.github {
+  color:#8b0404;
+}
+/*Seccion Footer*/
+footer {
+  height: 90px;
+  background-color:#95cac7;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: #fbfbfb;
+}
 
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contenedor {
+    background-color: #fbfbfb;
+  }
+  .imagenes {
+    /*foto*/
+
+    width: 80%;
+    height: auto;
+    margin-top: 120px;
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #ruta1 {
+    color: #990000;
+    font-size: 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  .Experiencia {
+    color: darkslategray;
+    margin-top: 50px;
+    margin-left: 160px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .texto {
+    color: #fbfbfb;
+    opacity: 0.9;
+    font-size: 18px;
+    background-color: #478f8a;
+    text-align: center;
+    text-indent: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    line-height: 1.5;
+  }
+
+  input[type="checkbox"] {
+    left: 10px;
+  }
+
+  .mail {
+    color: #990000(15, 15, 15);
+  }
+
+  .linkedin {
+    color: #990000(15, 15, 15);
+  }
+}
+.github {
+  color: #990000(15, 15, 15);
+}
+.iconos a:hover {
+  transform: scale(1.2);
+  color: aqua;
+}
+footer {
+  background-color: #8b0404;
+}
+
+@media (min-width: 370px) and (max-width: 600px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+
+  .abrir-menu {
+    color: #fbfbfb;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 2px;
+    margin-right: 50px;
+  }
+
+  .cerrar-menu {
+    color: #fbfbfb;
+    margin-top: 20px;
+  }
+
+  .nav-lista {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #478f8a;
+    padding: auto;
+  }
+
+  .nav-lista ul li {
+    align-items: end;
+    gap: 1rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #990000;
+  }
+
+  #nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .imagenes {
+    /*foto*/
+
+    margin-left: 80px;
+  }
+  input[type="checkbox"] {
+    left: 10px;
+  }
+  #ruta1 {
+    margin-right: 50px;
+  }
+}
+
