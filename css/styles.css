@@ -97,7 +97,7 @@ input[type="checkbox"] {
   width: 40px;
   height: 20px;
   left: 0;
-  top: 0;
+  top: 20px;
   background-color: #478f8a;
   appearance: none;
   outline: none;
@@ -130,6 +130,26 @@ input[type="checkbox"]:checked::before {
   color: #f2f2f2;
 }
 
+#claro  {
+  position:absolute;
+  color: #478f8a;
+  width: 20px;
+  height: 50px;
+  left: 0;
+  top: 0;
+    
+}
+#oscuro  {
+  position: absolute; 
+  color: #478f8a;
+  width: 50px;
+  height: 50px;
+  left: 5px;
+  top: 0;
+
+ }
+
+
 .imagenes {
   /*foto*/
 
@@ -142,7 +162,7 @@ input[type="checkbox"]:checked::before {
 .logo {
   width: 90%;
   max-width: 350px;
-  margin-left: 150px;
+  margin-left: 50px;
   border-radius: 50%;
 }
 
@@ -237,7 +257,8 @@ h1 {
 #portfolio {
   max-width: 1100px;
   padding: 100px 0;
-  margin: auto;
+  margin:auto;
+  
 }
 
 #portfolio .titulo-seccion {
@@ -251,15 +272,17 @@ h1 {
 }
 
 #portfolio .fila {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
+  display:flex;
+  justify-content:center;
+  
 }
 
 #portfolio .fila .proyecto {
   max-width: 450px;
+  height: 280px;
   border: 1px solid #000;
-  margin: 0 10px;
+  margin-left: auto;
+  margin-right:auto;
   position: relative;
   overflow: hidden;
 }
@@ -341,7 +364,7 @@ h1 {
   color:#8b0404;
   text-decoration: underline;
   text-decoration-color: #d3d3d3;
-  text-decoration-thickness: 5px;
+  
 }
 
 #contacto .btn-enviar {
@@ -436,7 +459,28 @@ footer {
   background-color: #8b0404;
   margin-bottom: 0;
 }
+#claro {
+  left: 10px;
+  top: 0;
  }
+ #portfolio .fila{
+  display:block;
+  justify-content: center;
+  margin:auto;
+}
+
+
+#oscuro {
+  left: 15px;
+  top: 0;
+ } 
+ input[type="checkbox"] {
+  left: 10px;
+  
+}
+
+ }
+
 @media (min-width: 320px) and (max-width: 600px) {
  
   .contenedor {
@@ -526,5 +570,22 @@ footer {
   footer {
     margin-bottom: 0;
   }
+
+  #portfolio .fila{
+    display:block;
+    justify-content: center;
+    margin: auto;
+    
+  }
+  
+  #claro {
+    left: 10px;
+    top: 0;
+   }
+
+  #oscuro {
+    left: 15px;
+    top: 0;
+   } 
 
  }
